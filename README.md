@@ -3,8 +3,8 @@
 
 ### Script for automatically create ec2 instance, install docker and start Jenkins image 
 
-`git clone https://github.com/rlnq/terraform-docker-jenkins.git`
+`git clone https://github.com/rlnq/terraform_docker_jenkins.git`
 
-`cd terraform-docker-jenkins`
+`cd terraform_docker_jenkins`
 
 ssh-keygen -f ssh-key
