@@ -19,8 +19,8 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 # Clone repo and start Jenkins image
-git clone https://github.com/rlnq/terraform_docker_jenkins
+git clone https://github.com/rlnq/docker-jenkins.git
 
-cd terraform_docker_jenkins
+cd docker-jenkins
 sudo docker build -t 'jenkins-with-docker' .
 sudo docker run -d -p 8080:8080 --name "jenkins-with-docker" -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins-with-docker
