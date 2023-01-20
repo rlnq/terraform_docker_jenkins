@@ -5,6 +5,6 @@
 
 `git clone https://github.com/rlnq/terraform_docker_jenkins.git`
 
-`cd terraform_docker_jenkins`
+`cd terraform_docker_jenkins/`
 
 ssh-keygen -f ssh-key
