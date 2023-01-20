@@ -1,6 +1,6 @@
-# This terraform project automatically creates EC2 instance with docker and Jenkins image. 
+# This terraform project automatically creates EC2 instance with Docker and Jenkins . 
 
-### This project automatically create EC2 instance on the Ubuntu 22.04 distribution in the eu-west-1 region by default, then install docker and build and run Jenkins container on port 8080 with 
+### This project automatically create EC2 instance on the Ubuntu 22.04 distribution in the eu-west-1 region by default, then install docker and build and run Jenkins container on port 8080 
 
 ### Requirements:
 * AWS Free Tier account 
