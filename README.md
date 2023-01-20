@@ -1,6 +1,15 @@
-# This terraform project automatically creates EC2 instance with Docker and Jenkins . 
+# Homework 9 - Task. Jenkins/-CI pipelines/Groovy - This terraform project automatically creates EC2 instance with Docker and Jenkins
 
-### This project automatically create EC2 instance on the Ubuntu 22.04 distribution in the eu-west-1 region by default, then install docker and build and run Jenkins container on port 8080 
+### Task:
+1. Setup Jenkins on server.
+2. Create Multibranch pipeline and connect it with the Gitlab/Github project repository with the Jenkinsfile
+3. Jenkinsfile should have several stages: build, tests, notification (telegram bot, etc.)
+4. [Optional] Use branch conditions, vars, etc
+5. [Optional] Create script for automated Jenkins setup (with a user, plugins).
+
+--------------------------------------------------------
+
+## This project automatically create EC2 instance on the Ubuntu 22.04 distribution in the eu-west-1 region by default, then install docker and build and run Jenkins container on port 8080 
 
 ### Requirements:
 * AWS Free Tier account 
@@ -44,11 +53,15 @@
 
 > Your public IP address will appear at the end of `terraform apply` or you can use the `terraform output` command
 
--------------------------------------------------------------------------------------------------------------------->
-
 * #### Manage your infrastructure:
 
 > To make changes to your infrastructure, modify your configuration file and then run `terraform apply` again.
 
 > To destroy your infrastructure, type `terraform destroy`, and press Enter.
+
+-----------------------------------------------------------------------------
+
+## Next steps:
+* Create Multibranch pipeline and connect it with the Gitlab/Github project repository with the Jenkinsfile
+* Jenkinsfile should have several stages: build, tests, notification (telegram bot, etc.)
 
