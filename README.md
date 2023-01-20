@@ -43,3 +43,12 @@
 * #### Wait a few minutes and go to your new Jenkins server: *`http://your_public_ip:8080`*
 
 > Your public IP address will appear at the end of `terraform apply` or you can use the `terraform output` command
+
+-------------------------------------------------------------------------------------------------------------------->
+
+* #### Manage your infrastructure:
+
+> To make changes to your infrastructure, modify your configuration file and then run `terraform apply` again.
+
+> To destroy your infrastructure, type `terraform destroy`, and press Enter.
+
