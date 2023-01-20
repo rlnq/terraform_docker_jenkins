@@ -20,9 +20,11 @@
 * [Install Terraform](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform)
 * [Install the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 * [Set the environment variables to configure the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) - <code> aws configure </code>
-* To clone a repository to your local machine, you'll need to have Git installed. If you don't already have it installed, you can download it from the official website - [Git download](https://git-scm.com/downloads) 
+* To clone a repository to your local machine, you'll need to have Git installed. If you don't already have it installed, you can download it from the official website - [Git download](https://git-scm.com/downloads)
 
-### Steps:
+## Part 1: Setup Jenkins on server
+
+### Steps
 
 * #### Clone this repository using command:
 
@@ -61,7 +63,7 @@
 
 -----------------------------------------------------------------------------
 
-## Next steps:
+## Part 2:
 * Create Multibranch pipeline and connect it with the Gitlab/Github project repository with the Jenkinsfile
 * Jenkinsfile should have several stages: build, tests, notification (telegram bot, etc.)
 
