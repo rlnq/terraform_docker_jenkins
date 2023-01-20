@@ -19,6 +19,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 # Clone repo and start Jenkins image
+cd /home/ubuntu
 git clone https://github.com/rlnq/docker-jenkins.git
 
 cd docker-jenkins
