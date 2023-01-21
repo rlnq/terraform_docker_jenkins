@@ -29,15 +29,15 @@ pipeline {
             }
         }
         
-        stage('stage only for test') {
-            script {
-                if (branch == 'test') {
-                    steps {
-                        echo "This steps only for test stage"
-                    }
-                }
+        stage('Build') {
+            when {
+                expression { return env.BRANCH_NAME == 'test' }
+            }
+            steps {
+                echo "This steps only for test stage!"
             }
         }
+           
 
         stage('Push notification') {
             steps {
