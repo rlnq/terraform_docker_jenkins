@@ -83,21 +83,21 @@ Then your must enter your credentials and install suggested plugins and after th
 
 #### My simple [Jenkinsfile](https://github.com/rlnq/terraform_docker_jenkins/blob/main/Jenkinsfile) with conditions and vars 
 
-### My pipeline branches: 
+#### My pipeline branches: 
 
 ![image](https://user-images.githubusercontent.com/117667360/213890494-4f3ae25b-3a9b-444b-8146-24c812e5fed3.png)
 
-### First stage - Build. I used Jenkins variables in this stage for examples:
+#### First stage - Build. I used Jenkins variables in this stage for examples:
 
 ![image](https://user-images.githubusercontent.com/117667360/213890566-d21987fd-2901-4b14-9cd5-d6146fccd2a0.png)
 
-### Second stage - Test. I used shell commands:
+#### Second stage - Test. I used shell commands:
 
 ![image](https://user-images.githubusercontent.com/117667360/213890626-945a5323-8999-4e47-826d-bdc9f2dc1643.png)
 
-### I used 'env.BRANCH_NAME' variable to get the current branch name and the 'when' clause to specify a condition for this stage.
-### In our examples, we've skipped the "Stage only for test branch" because the current branch being compiled is not a test branch.
-### In the last stage "Push notification"we are receive Telegram notifications if our result is success. (Tomorrow i will make success and failure result)
+#### I used 'env.BRANCH_NAME' variable to get the current branch name and the 'when' clause to specify a condition for this stage.
+#### In our examples, we've skipped the "Stage only for test branch" because the current branch being compiled is not a test branch.
+#### In the last stage "Push notification"we are receive Telegram notifications if our result is success. (Tomorrow i will make success and failure result)
 
 ![image](https://user-images.githubusercontent.com/117667360/213890694-c44ef58f-6177-4132-880c-2c0504273c7c.png)
 
