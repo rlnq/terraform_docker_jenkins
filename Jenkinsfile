@@ -4,9 +4,11 @@ pipeline {
         stage('1 - Build') {
             steps {
                 echo "buildung the application..."
+                sh '''
                 date
                 echo $FLUTTER_VERSION
                 echo $SECRET_TEXT
+                '''
             }
         }
         
