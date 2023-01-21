@@ -95,7 +95,9 @@ Then your must enter your credentials and install suggested plugins and after th
 
 ![image](https://user-images.githubusercontent.com/117667360/213890626-945a5323-8999-4e47-826d-bdc9f2dc1643.png)
 
-### Stage "Stage only for test branch" we skipped because 
+### I used 'env.BRANCH_NAME' variable to get the current branch name and the 'when' clause to specify a condition for this stage.
+### In our examples, we've skipped the "Stage only for test branch" because the current branch being compiled is not a test branch.
+### In the last stage "Push notification"we are receive Telegram notifications if our result is success. (Tomorrow i will make success and failure result)
 
 ![image](https://user-images.githubusercontent.com/117667360/213890694-c44ef58f-6177-4132-880c-2c0504273c7c.png)
 
