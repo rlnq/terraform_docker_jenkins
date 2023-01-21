@@ -59,13 +59,19 @@
 
 > To destroy your infrastructure, type `terraform destroy`, and press Enter.
 
-* #### Wait a few minutes and go to your new Jenkins server: *`http://your_public_ip:8080`*
-
 > Your public IP address will appear at the end of `terraform apply` or you can use the `terraform output` command
 
-And you will see 
+* #### Wait a few minutes and go to your new Jenkins server: *`http://your_public_ip:8080`*
 
-![image](https://user-images.githubusercontent.com/117667360/213865016-fb9030aa-df2a-4375-942f-784564bc7c5f.png)
+* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create user with default credentials ("MyUSERNAME","MyPASSWORD"). 
+
+You can use this script and change user credentials: `git clone https://github.com/rlnq/docker-jenkins.git` to your repo --> change credentials --> clone  this repo in user-data.sh 
+
+When we are first time going to our Jenkins server we will see Authorization page. Then we install enter your credentials, install suggested plugins and Jenkins is ready!
+
+![image](https://user-images.githubusercontent.com/117667360/213868683-1a5f4fc3-9a99-49eb-af33-404be77cd657.png)
+
+Then your must enter your credentials and install suggested plugins and after that your Jenkins will be ready!
 
 -----------------------------------------------------------------------------
 
