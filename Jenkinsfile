@@ -6,7 +6,7 @@ pipeline {
                 echo "buildung the application..."
                 sh '''
                 date
-                echo $BUILD_ID
+                echo $JOB_NAME: $BUILD_ID - $BUILD_TAG
                 '''
             }
         }
