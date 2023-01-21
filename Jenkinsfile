@@ -6,10 +6,10 @@ pipeline {
                 echo "buildung the application..."
                 sh '''
                 date
-                echo $BUILD_ID - $BUILD_TAG
-                $JENKINS_URL
-                $JOB_NAME
-                $JAVA_HOME
+                echo $BUILD_ID
+                echo $JENKINS_URL
+                echo $JOB_NAME
+                echo $JAVA_HOME
                 '''
             }
         }
