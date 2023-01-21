@@ -8,8 +8,6 @@ pipeline {
                 date
                 echo $BUILD_ID
                 echo $JENKINS_URL
-                echo $JOB_NAME
-                echo $JAVA_HOME
                 '''
             }
         }
@@ -29,12 +27,13 @@ pipeline {
             }
         }
         
-        stage('Build') {
+        stage('Stage only for test branch') {
             when {
                 expression { return env.BRANCH_NAME == 'test' }
             }
             steps {
                 echo "This steps only for test stage!"
+                echo "Result: SUCCESS"
             }
         }
            
@@ -44,8 +43,7 @@ pipeline {
                 script{
                     withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) { 
                         sh '''
-                        curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode="HTML" -d text="<b>Project</b>: POC \
-                        <b>Result</b>= Success"
+                        curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode="HTML" -d text="<b>Result</b>= Success"
                         '''
                     }
                 }
