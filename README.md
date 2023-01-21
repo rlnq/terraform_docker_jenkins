@@ -1,4 +1,5 @@
-# Homework 9 - Task. Jenkins/-CI pipelines/Groovy - This terraform project automatically creates EC2 instance with Docker and Jenkins
+# Homework 9 - Task. Jenkins/-CI pipelines/Groovy
+# This terraform project automatically creates EC2 instance with Docker and Jenkins
 
 ### Task:
 1. Setup Jenkins on server.
