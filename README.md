@@ -1,5 +1,5 @@
 # Homework 9 - Task. Jenkins/-CI pipelines/Groovy
-# This terraform project automatically creates EC2 instance with Docker and Jenkins
+# This Terraform project automatically creates EC2 instance with Docker and Jenkins
 
 ### Task:
 1. Setup Jenkins on server.
@@ -79,12 +79,23 @@ Then your must enter your credentials and install suggested plugins and after th
 # Part 2:
 * Create Multibranch pipeline and connect it with the Gitlab/Github project repository with the Jenkinsfile
 * Jenkinsfile should have several stages: build, tests, notification (telegram bot, etc.)
+* [Optional] Use branch conditions, vars, etc
+
+#### My simple [Jenkinsfile](https://github.com/rlnq/terraform_docker_jenkins/blob/main/Jenkinsfile) with conditions and vars 
+
+### My pipeline branches: 
 
 ![image](https://user-images.githubusercontent.com/117667360/213890494-4f3ae25b-3a9b-444b-8146-24c812e5fed3.png)
 
+### First stage - Build. I used Jenkins variables in this stage for examples:
+
 ![image](https://user-images.githubusercontent.com/117667360/213890566-d21987fd-2901-4b14-9cd5-d6146fccd2a0.png)
 
+### Second stage - Test. I used shell commands:
+
 ![image](https://user-images.githubusercontent.com/117667360/213890626-945a5323-8999-4e47-826d-bdc9f2dc1643.png)
+
+### Stage "Stage only for test branch" we skipped because 
 
 ![image](https://user-images.githubusercontent.com/117667360/213890694-c44ef58f-6177-4132-880c-2c0504273c7c.png)
 
