@@ -67,7 +67,7 @@
 
 You can use this script and change user credentials: `git clone https://github.com/rlnq/docker-jenkins.git` to your repo --> change credentials --> clone  this repo in user-data.sh 
 
-When we are first time going to our Jenkins server we will see Authorization page. Then we install enter your credentials, install suggested plugins and Jenkins is ready!
+When we are first time going to our Jenkins server we will see Authorization page.
 
 ![image](https://user-images.githubusercontent.com/117667360/213868683-1a5f4fc3-9a99-49eb-af33-404be77cd657.png)
 
