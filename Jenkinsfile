@@ -6,8 +6,7 @@ pipeline {
                 echo "buildung the application..."
                 sh '''
                 date
-                echo $FLUTTER_VERSION
-                echo $SECRET_TEXT
+                echo $BUILD_ID
                 '''
             }
         }
