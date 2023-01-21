@@ -63,9 +63,9 @@
 
 * #### Wait a few minutes and go to your new Jenkins server: *`http://your_public_ip:8080`*
 
-* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create user with default credentials ("MyUSERNAME","MyPASSWORD"). 
+* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create user with default credentials ("jenkins-user","jenkins1234"). 
 
-You can use this script and change user credentials: `git clone https://github.com/rlnq/docker-jenkins.git` to your repo --> change credentials --> clone  this repo in user-data.sh 
+You can change user credentials in Jenkins or set up this script for you: `git clone https://github.com/rlnq/docker-jenkins.git` to your repo --> change credentials --> clone  this repo in user-data.sh 
 
 When we are first time going to our Jenkins server we will see Authorization page.
 
