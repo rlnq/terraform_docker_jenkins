@@ -9,8 +9,8 @@ pipeline {
                 echo $BUILD_ID - $BUILD_TAG
                 $JENKINS_URL
                 $JOB_NAME
-                '''
                 $JAVA_HOME
+                '''
             }
         }
         
