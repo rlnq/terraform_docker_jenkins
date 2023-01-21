@@ -80,3 +80,11 @@ Then your must enter your credentials and install suggested plugins and after th
 * Create Multibranch pipeline and connect it with the Gitlab/Github project repository with the Jenkinsfile
 * Jenkinsfile should have several stages: build, tests, notification (telegram bot, etc.)
 
+![image](https://user-images.githubusercontent.com/117667360/213888987-fbfaafd5-a85c-43bc-a4ef-8fffdae7d8ef.png)
+
+![image](https://user-images.githubusercontent.com/117667360/213889054-b3048582-07a9-47ae-b794-0084441e1d0e.png)
+
+![image](https://user-images.githubusercontent.com/117667360/213888892-be027441-bab8-46fb-a93f-01c44b40f19b.png)
+
+![image](https://user-images.githubusercontent.com/117667360/213888907-d1bddecf-41b4-4b8e-ba8a-ceb6ce9a4251.png)
+
