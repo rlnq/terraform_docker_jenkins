@@ -28,14 +28,14 @@ pipeline {
                 echo "deploying the application..."
             }
         }
+        
         stage('stage only for test') {
-            when {
-                any0f {
-                    branch "test"
+            script {
+                if (branch == 'test') {
+                    steps {
+                        echo "This steps only for test stage"
+                    }
                 }
-            }
-            steps {
-                echo "This steps only for test stage!"
             }
         }
 
