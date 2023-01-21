@@ -22,7 +22,9 @@
 * [Set the environment variables to configure the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) - <code> aws configure </code>
 * To clone a repository to your local machine, you'll need to have Git installed. If you don't already have it installed, you can download it from the official website - [Git download](https://git-scm.com/downloads)
 
-## Part 1: Setup Jenkins on server
+# Part 1: 
+* Setup Jenkins on server
+* [Optional] Create script for automated Jenkins setup (with a user, plugins).
 
 ### Steps
 
@@ -63,7 +65,7 @@
 
 -----------------------------------------------------------------------------
 
-## Part 2:
+# Part 2:
 * Create Multibranch pipeline and connect it with the Gitlab/Github project repository with the Jenkinsfile
 * Jenkinsfile should have several stages: build, tests, notification (telegram bot, etc.)
 
