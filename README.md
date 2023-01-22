@@ -10,7 +10,7 @@
 
 --------------------------------------------------------
 
-## This project automatically creates an EC2 instance on the Ubuntu 22.04 distribution in the eu-west-1 region, by default, then installs docker, builds and runs the Jenkins container on port 8080 
+## This project automatically creates an EC2 instance on the Ubuntu 22.04 distribution in the eu-west-1 region, then installs docker, builds and runs the Jenkins container on port 8080 
 
 ### Requirements:
 * AWS Free Tier account 
