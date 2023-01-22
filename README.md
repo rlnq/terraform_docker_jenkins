@@ -62,7 +62,7 @@
 
 * #### Wait a few minutes and go to your new Jenkins server: *`http://your_public_ip:8080`*
 
-* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create a user with default credentials ("jenkins-user","jenkins1234"). You can change the user credentials in Manage Jenkins on your server or download this repository and change the credentials ( also u need to change repo in [user_data.sh](https://github.com/rlnq/terraform_docker_jenkins/blob/main/user_data.sh)
+* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create a user with default credentials ("jenkins-user","jenkins1234"). You can change the user credentials in Manage Jenkins on your server or download this repository and change the credentials ( also u need to change repo in [user_data.sh](https://github.com/rlnq/terraform_docker_jenkins/blob/main/user_data.sh) )
 
 When we first log into our Jenkins server, we will see an authorization page.
 
