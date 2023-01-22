@@ -27,7 +27,7 @@ cd /home/ubuntu
 #sudo docker run -d -p 8080:8080 --name "jenkins-with-docker" -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins-with-docker
 
 git clone https://github.com/rlnq/docket-test.git
-cd docker-test
+cd docket-test
 
 sudo docker build -t 'jenkins-with-docker' .
 sudo docker run -d -p 8080:8080 --name "jenkins-with-docker" -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins-with-docker
