@@ -25,6 +25,8 @@
 * Setup Jenkins on server
 * [Optional] Create script for automated Jenkins setup (with a user, plugins).
 
+#### My repository with Dockerfile and Jenkins files: [docker-jenkins](https://github.com/rlnq/docker-jenkins)
+
 ### Steps
 
 * #### Clone this repository using command:
