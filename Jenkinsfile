@@ -4,11 +4,6 @@ pipeline {
         stage('1 - Build') {
             steps {
                 echo "buildung the application..."
-                sh '''
-                date
-                echo $BUILD_ID
-                echo $JENKINS_URL
-                '''
             }
         }
         
@@ -26,32 +21,17 @@ pipeline {
                 echo "deploying the application..."
             }
         }
-        
-        stage('Stage only for test branch') {
-            when {
-                expression { return env.BRANCH_NAME == 'test' }
-            }
+
+        stage('Push notification') {
             steps {
-                echo "This steps only for test stage!"
-                echo "Result: SUCCESS"
+                script{
+                    withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) { 
+                        sh '''
+                        curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode="HTML" -d text="<b>Branch</b>:${BRANCH_NAME} - <b>Result</b>:Success"
+                        '''
+                    }
+                }
             }
-        } 
-    }
-    post {
-        failure {
-            telegramSend(
-                token: 'telegramToken',
-                chatId: 'telegramChatId',
-                message: 'Job failed!'
-            )
-        }
-        success {
-            telegramSend(
-                token: 'telegramToken',
-                chatId: 'telegramChatId',
-                message: 'Job succeeded!'
-            )
         }
     }
 }
-
