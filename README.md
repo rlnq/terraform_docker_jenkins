@@ -10,12 +10,10 @@
 
 --------------------------------------------------------
 
-## This project automatically create EC2 instance on the Ubuntu 22.04 distribution in the eu-west-1 region by default, then install docker and build and run Jenkins container on port 8080 
+## This project automatically creates an EC2 instance on the Ubuntu 22.04 distribution in the eu-west-1 region, by default, then installs docker, builds and runs the Jenkins container on port 8080 
 
 ### Requirements:
 * AWS Free Tier account 
-* Terraform
-* AWS CLI
 
 ### Prerequisite:
 * [Install Terraform](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform)
@@ -64,9 +62,9 @@
 
 * #### Wait a few minutes and go to your new Jenkins server: *`http://your_public_ip:8080`*
 
-* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create user with default credentials ("jenkins-user","jenkins1234"). 
+* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create user with default credentials ("jenkins-user","jenkins1234"). You can change user credentials in Manage Jenkins on your server or download this repository and change credentials ( also u need to change repo in [user_data.sh](https://github.com/rlnq/terraform_docker_jenkins/blob/main/user_data.sh)
 
-You can change user credentials in Jenkins or set up this script for you: `git clone https://github.com/rlnq/docker-jenkins.git` to your repo --> change credentials --> clone  this repo in user-data.sh 
+> clone  this repo in user-data.sh 
 
 When we are first time going to our Jenkins server we will see Authorization page.
 
