@@ -101,6 +101,7 @@ Then your must enter your credentials and install the suggested plugins and afte
 
 <img width="460" alt="Screenshot 2023-01-22 at 23 31 04" src="https://user-images.githubusercontent.com/117667360/213941521-04e08ea0-7edb-40b9-8a0b-156454b3eac7.png">
 
+### For every commit in the main or test branch (in our case), the Github webhook will generate an event for the Jenkins Pipeline, which will call our Multibranch pipeline.
 ### My Github WebHooks:
 
 ![image](https://user-images.githubusercontent.com/117667360/213942284-889d2d02-35a7-45f7-94cc-ee1a00821649.png)
