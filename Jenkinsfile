@@ -49,7 +49,7 @@ pipeline {
             telegramSend(
                 token: 'telegramToken',
                 chatId: 'telegramChatId',
-                message: 'Job telegramChatId!'
+                message: 'Job succeeded!'
             )
         }
     }
