@@ -20,8 +20,14 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # Clone repo and start Jenkins image
 cd /home/ubuntu
-git clone https://github.com/rlnq/docker-jenkins.git
+#git clone https://github.com/rlnq/docker-jenkins.git
 
-cd docker-jenkins
+#cd docker-jenkins
+#sudo docker build -t 'jenkins-with-docker' .
+#sudo docker run -d -p 8080:8080 --name "jenkins-with-docker" -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins-with-docker
+
+git clone https://github.com/rlnq/docket-test.git
+cd docker-test
+
 sudo docker build -t 'jenkins-with-docker' .
 sudo docker run -d -p 8080:8080 --name "jenkins-with-docker" -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins-with-docker
