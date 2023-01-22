@@ -98,6 +98,8 @@ Then your must enter your credentials and install the suggested plugins and afte
 ![image](https://user-images.githubusercontent.com/117667360/213890694-c44ef58f-6177-4132-880c-2c0504273c7c.png)
 
 
+<img width="460" alt="Screenshot 2023-01-22 at 23 31 04" src="https://user-images.githubusercontent.com/117667360/213941521-04e08ea0-7edb-40b9-8a0b-156454b3eac7.png">
+
 
 
 
