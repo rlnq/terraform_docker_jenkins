@@ -62,15 +62,13 @@
 
 * #### Wait a few minutes and go to your new Jenkins server: *`http://your_public_ip:8080`*
 
-* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create user with default credentials ("jenkins-user","jenkins1234"). You can change user credentials in Manage Jenkins on your server or download this repository and change credentials ( also u need to change repo in [user_data.sh](https://github.com/rlnq/terraform_docker_jenkins/blob/main/user_data.sh)
+* #### Our [groovy-script](https://github.com/rlnq/docker-jenkins/blob/main/jenkins-home/init.groovy.d/startup.groovy) will create a user with default credentials ("jenkins-user","jenkins1234"). You can change the user credentials in Manage Jenkins on your server or download this repository and change the credentials ( also u need to change repo in [user_data.sh](https://github.com/rlnq/terraform_docker_jenkins/blob/main/user_data.sh)
 
-> clone  this repo in user-data.sh 
-
-When we are first time going to our Jenkins server we will see Authorization page.
+When we first log into our Jenkins server, we will see an authorization page.
 
 ![image](https://user-images.githubusercontent.com/117667360/213868683-1a5f4fc3-9a99-49eb-af33-404be77cd657.png)
 
-Then your must enter your credentials and install suggested plugins and after that your Jenkins will be ready!
+Then your must enter your credentials and install the suggested plugins and after that your Jenkins will be ready!
 
 -----------------------------------------------------------------------------
 
@@ -85,17 +83,17 @@ Then your must enter your credentials and install suggested plugins and after th
 
 ![image](https://user-images.githubusercontent.com/117667360/213890494-4f3ae25b-3a9b-444b-8146-24c812e5fed3.png)
 
-#### First stage - Build. I used Jenkins variables in this stage for examples:
+#### The first stage - Build. I used Jenkins variables in this stage:
 
 ![image](https://user-images.githubusercontent.com/117667360/213890566-d21987fd-2901-4b14-9cd5-d6146fccd2a0.png)
 
-#### Second stage - Test. I used shell commands:
+#### The second stage - Test:
 
 ![image](https://user-images.githubusercontent.com/117667360/213890626-945a5323-8999-4e47-826d-bdc9f2dc1643.png)
 
-#### I used 'env.BRANCH_NAME' variable to get the current branch name and the 'when' clause to specify a condition for this stage.
+#### I used the 'env.BRANCH_NAME' variable to get the name of the current branch and the 'when' clause to define the condition for that stage.
 #### In our examples, we've skipped the "Stage only for test branch" because the current branch being compiled is not a test branch.
-#### In the last stage "Push notification"we are receive Telegram notifications if our result is success. (Tomorrow i will make success and failure result)
+#### At the last stage "Push notification" we receive a Telegram notifications:
 
 ![image](https://user-images.githubusercontent.com/117667360/213890694-c44ef58f-6177-4132-880c-2c0504273c7c.png)
 
