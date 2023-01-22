@@ -35,19 +35,23 @@ pipeline {
                 echo "This steps only for test stage!"
                 echo "Result: SUCCESS"
             }
+        } 
+    }
+    post {
+        failure {
+            telegramSend(
+                token: 'telegramToken',
+                chatId: 'telegramChatId',
+                message: 'Job failed!'
+            )
         }
-           
-
-        stage('Push notification') {
-            steps {
-                script{
-                    withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) { 
-                        sh '''
-                        curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode="HTML" -d text="<b>Result</b> = Success"
-                        '''
-                    }
-                }
-            }
+        success {
+            telegramSend(
+                token: 'telegramToken',
+                chatId: 'telegramChatId',
+                message: 'Job telegramChatId!'
+            )
         }
     }
 }
+
