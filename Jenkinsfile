@@ -4,6 +4,11 @@ pipeline {
         stage('1 - Build') {
             steps {
                 echo "buildung the application..."
+                sh '''
+                date
+                echo $BUILD_ID
+                echo $JENKINS_URL
+                '''
             }
         }
         
@@ -21,7 +26,16 @@ pipeline {
                 echo "deploying the application..."
             }
         }
-
+        
+        stage('Stage only for test branch') {
+            when {
+                expression { return env.BRANCH_NAME == 'test' }
+            }
+            steps {
+                echo "This steps only for test stage!"
+                echo "Result: SUCCESS"
+            }
+        } 
         stage('Push notification') {
             steps {
                 script{
