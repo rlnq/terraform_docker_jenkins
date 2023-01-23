@@ -38,17 +38,21 @@ pipeline {
         } 
     }
     post {
-        success {
-            // Send a push notification on success
-            script {
-                slackSend color: 'good', message: "Pipeline succeeded!"
-            }
+        success { 
+            sh  ("""
+                curl -s -X POST https://api.telegram.org/bot${telegramToken}/sendMessage -d chat_id=${telegramChatId} -d parse_mode=markdown -d text='*Full project name*: ${env.JOB_NAME} \n*Branch*: [$GIT_BRANCH]($GIT_URL) \n*Build* : [OK](${BUILD_URL}consoleFull)'
+            """)
+        }
+
+        aborted {
+            sh  ("""
+                curl -s -X POST https://api.telegram.org/bot${telegramToken}/sendMessage -d chat_id=${telegramChatId} -d parse_mode=markdown -d text='*Full project name*: ${env.JOB_NAME} \n*Branch*: [$GIT_BRANCH]($GIT_URL) \n*Build* : [Aborted](${BUILD_URL}consoleFull)'
+            """)
         }
         failure {
-            // Send a push notification on failure
-            script {
-                slackSend color: 'danger', message: "Pipeline failed!"
-            }
+            sh  ("""
+                curl -s -X POST https://api.telegram.org/bot${telegramToken}/sendMessage -d chat_id=${telegramChatId} -d parse_mode=markdown -d text='*Full project name*: ${env.JOB_NAME} \n*Branch*: [$GIT_BRANCH]($GIT_URL) \n*Build* : [Not OK](${BUILD_URL}consoleFull)'
+            """)
         }
     }
 }
