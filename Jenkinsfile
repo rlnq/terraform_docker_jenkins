@@ -15,7 +15,7 @@ pipeline {
     post {
         success {
             telegramSend (
-                message: "Build Successful: ${env.JOB_NAME}#${env.BUILD_NUMBER}"
+                telegramSend(message: 'Hello World', chatId: 362837347)
             )
         }
     }
