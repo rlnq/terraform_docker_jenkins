@@ -36,15 +36,18 @@ pipeline {
                 echo "Result: SUCCESS"
             }
         } 
-        stage('Push notification') {
-            steps {
-                script{
-                    withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) { 
-                        sh '''
-                        curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode="HTML" -d text="<b>Branch</b>:${BRANCH_NAME} - <b>Result</b>:Success"
-                        '''
-                    }
-                }
+    }
+    post {
+        success {
+            // Send a push notification on success
+            script {
+                slackSend color: 'good', message: "Pipeline succeeded!"
+            }
+        }
+        failure {
+            // Send a push notification on failure
+            script {
+                slackSend color: 'danger', message: "Pipeline failed!"
             }
         }
     }
