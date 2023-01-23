@@ -14,11 +14,9 @@ pipeline {
     }
     post {
         success {
-            withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) {
-                telegramSend (
-                    message: "Build Successful: ${env.JOB_NAME}#${env.BUILD_NUMBER}"
-                )
-            }
+            telegramSend (
+                message: "Build Successful: ${env.JOB_NAME}#${env.BUILD_NUMBER}"
+            )
         }
     }
 }
