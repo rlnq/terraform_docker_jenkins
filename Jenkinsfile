@@ -14,22 +14,24 @@ pipeline {
     }
     post {
         success {
-            telegramSend (
-                withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) {
+            withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) {
+                telegramSend (
                     botId: 'TOKEN',
                     chatId: 'CHAT_ID',
                     message: "Build Successful: ${env.JOB_NAME}#${env.BUILD_NUMBER}"
-                }
-            )
+                )
+            }
         }
+        
         failure {
-            telegramSend (
-                withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) {
+            withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'), string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) {
+                telegramSend (
                     botId: 'TOKEN',
                     chatId: 'CHAT_ID',
-                    message: "Build Failed: ${env.JOB_NAME}#${env.BUILD_NUMBER}"
-                }
-            )
+                    message: "Build failed: ${env.JOB_NAME}#${env.BUILD_NUMBER}"
+                )
+            }
         }
     }
 }
+
